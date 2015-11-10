@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pFF-9y-T2b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pFF-9y-T2b">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -17,16 +17,17 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PzQ-wt-J4X" kind="relationship" relationship="viewControllers" id="lvY-no-EfY"/>
+                        <segue destination="U4f-Gm-v9K" kind="relationship" relationship="viewControllers" id="WAp-mr-Txe"/>
                         <segue destination="Ylv-Zb-9LL" kind="relationship" relationship="viewControllers" id="d1L-XN-IJc"/>
                         <segue destination="zcz-7X-VgC" kind="relationship" relationship="viewControllers" id="94l-lt-kYP"/>
                         <segue destination="8ad-aD-9Gu" kind="relationship" relationship="viewControllers" id="Y7y-23-RxF"/>
+                        <segue destination="yQK-L7-NSO" kind="relationship" relationship="viewControllers" id="tKv-Ri-mVA"/>
                         <segue destination="ZZ4-pa-mUD" kind="relationship" relationship="viewControllers" id="Hn1-FW-kpw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWo-4b-DoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762" y="-298.5"/>
+            <point key="canvasLocation" x="-3642" y="133.5"/>
         </scene>
         <!--登陆-->
         <scene sceneID="tne-QT-ifu">
@@ -326,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n47-rq-e4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2355" y="-1560.75"/>
+            <point key="canvasLocation" x="3273" y="-1560.75"/>
         </scene>
         <!--登陆-->
         <scene sceneID="b5X-sP-anV">
@@ -517,12 +518,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYO-hj-K1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2409" y="556.5"/>
+            <point key="canvasLocation" x="3327" y="556.5"/>
         </scene>
-        <!--主页显示-->
+        <!--Main View Controller-->
         <scene sceneID="Ldb-VJ-PJy">
             <objects>
-                <viewController id="PzQ-wt-J4X" sceneMemberID="viewController">
+                <viewController id="PzQ-wt-J4X" customClass="MainViewController" customModule="TestPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FLe-2k-MNu"/>
                         <viewControllerLayoutGuide type="bottom" id="1Sj-PF-Rac"/>
@@ -555,11 +556,17 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="主页显示" id="clE-MP-VAY"/>
+                    <navigationItem key="navigationItem" id="guD-3w-ibf">
+                        <barButtonItem key="rightBarButtonItem" title="Alert" id="yRs-4E-Jku">
+                            <connections>
+                                <action selector="alert:" destination="PzQ-wt-J4X" id="Trv-vw-quV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3R-mQ-r3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367.5" y="-1596.75"/>
+            <point key="canvasLocation" x="1285.5" y="-1596.75"/>
         </scene>
         <!--网页-->
         <scene sceneID="PQy-uT-b4l">
@@ -579,7 +586,150 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onZ-oT-SAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437" y="-1560.75"/>
+            <point key="canvasLocation" x="2355" y="-1560.75"/>
+        </scene>
+        <!--Accelerometer View Controller-->
+        <scene sceneID="9Rp-Cm-t6z">
+            <objects>
+                <viewController id="8bo-ui-eki" customClass="AccelerometerViewController" customModule="TestPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GcW-ii-eqG"/>
+                        <viewControllerLayoutGuide type="bottom" id="182-Kn-TES"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="omZ-eV-tHk">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-p8-pnp">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKP-Q2-Vg6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2X-W5-xs5">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c5G-jo-0NI">
+                                <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Qei-lK-b0b"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qei-lK-b0b"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Qei-lK-b0b"/>
+                                    </mask>
+                                </variation>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SVH-eC-yWh">
+                                <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
+                                <animations/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-Dd-k5p">
+                                <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
+                                <animations/>
+                            </progressView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SVH-eC-yWh" firstAttribute="trailing" secondItem="c5G-jo-0NI" secondAttribute="trailing" id="2fh-Zg-myd"/>
+                            <constraint firstItem="oKP-Q2-Vg6" firstAttribute="top" secondItem="fQt-p8-pnp" secondAttribute="bottom" constant="48" id="B9L-dy-ICT"/>
+                            <constraint firstItem="u2X-W5-xs5" firstAttribute="centerY" secondItem="GIx-Dd-k5p" secondAttribute="centerY" id="Es7-jr-lmY"/>
+                            <constraint firstItem="SVH-eC-yWh" firstAttribute="leading" secondItem="GIx-Dd-k5p" secondAttribute="leading" id="GBZ-jT-c0p"/>
+                            <constraint firstItem="c5G-jo-0NI" firstAttribute="centerY" secondItem="fQt-p8-pnp" secondAttribute="centerY" id="I4J-kk-AsI"/>
+                            <constraint firstItem="u2X-W5-xs5" firstAttribute="leading" secondItem="oKP-Q2-Vg6" secondAttribute="leading" id="JbJ-bb-uDs"/>
+                            <constraint firstItem="SVH-eC-yWh" firstAttribute="trailing" secondItem="GIx-Dd-k5p" secondAttribute="trailing" id="QqS-TD-5ad"/>
+                            <constraint firstItem="fQt-p8-pnp" firstAttribute="leading" secondItem="oKP-Q2-Vg6" secondAttribute="leading" id="SG2-g1-Pmu"/>
+                            <constraint firstItem="SVH-eC-yWh" firstAttribute="centerY" secondItem="oKP-Q2-Vg6" secondAttribute="centerY" id="am8-uz-ccQ"/>
+                            <constraint firstItem="fQt-p8-pnp" firstAttribute="top" secondItem="GcW-ii-eqG" secondAttribute="bottom" constant="156" id="kZd-8w-xGd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c5G-jo-0NI" secondAttribute="trailing" constant="45" id="oKz-ha-ift"/>
+                            <constraint firstItem="u2X-W5-xs5" firstAttribute="top" secondItem="oKP-Q2-Vg6" secondAttribute="bottom" constant="62" id="rA9-ra-kJY"/>
+                            <constraint firstItem="SVH-eC-yWh" firstAttribute="leading" secondItem="c5G-jo-0NI" secondAttribute="leading" id="xeO-ke-xi8"/>
+                            <constraint firstItem="fQt-p8-pnp" firstAttribute="leading" secondItem="omZ-eV-tHk" secondAttribute="leadingMargin" constant="45" id="ymY-A2-klf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="fQt-p8-pnp"/>
+                                <exclude reference="oKP-Q2-Vg6"/>
+                                <exclude reference="u2X-W5-xs5"/>
+                                <exclude reference="c5G-jo-0NI"/>
+                                <exclude reference="SVH-eC-yWh"/>
+                                <exclude reference="GIx-Dd-k5p"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="SG2-g1-Pmu"/>
+                                <exclude reference="kZd-8w-xGd"/>
+                                <exclude reference="ymY-A2-klf"/>
+                                <exclude reference="I4J-kk-AsI"/>
+                                <exclude reference="oKz-ha-ift"/>
+                                <exclude reference="B9L-dy-ICT"/>
+                                <exclude reference="2fh-Zg-myd"/>
+                                <exclude reference="GBZ-jT-c0p"/>
+                                <exclude reference="QqS-TD-5ad"/>
+                                <exclude reference="am8-uz-ccQ"/>
+                                <exclude reference="xeO-ke-xi8"/>
+                                <exclude reference="Es7-jr-lmY"/>
+                                <exclude reference="JbJ-bb-uDs"/>
+                                <exclude reference="rA9-ra-kJY"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="fQt-p8-pnp"/>
+                                <include reference="oKP-Q2-Vg6"/>
+                                <include reference="u2X-W5-xs5"/>
+                                <include reference="c5G-jo-0NI"/>
+                                <include reference="SVH-eC-yWh"/>
+                                <include reference="GIx-Dd-k5p"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="SG2-g1-Pmu"/>
+                                <include reference="kZd-8w-xGd"/>
+                                <include reference="ymY-A2-klf"/>
+                                <include reference="I4J-kk-AsI"/>
+                                <include reference="oKz-ha-ift"/>
+                                <include reference="B9L-dy-ICT"/>
+                                <include reference="2fh-Zg-myd"/>
+                                <include reference="GBZ-jT-c0p"/>
+                                <include reference="QqS-TD-5ad"/>
+                                <include reference="am8-uz-ccQ"/>
+                                <include reference="xeO-ke-xi8"/>
+                                <include reference="Es7-jr-lmY"/>
+                                <include reference="JbJ-bb-uDs"/>
+                                <include reference="rA9-ra-kJY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="eCd-Ze-iSB"/>
+                    <connections>
+                        <outlet property="xLabel" destination="I4J-kk-AsI" id="XPh-1a-2VY"/>
+                        <outlet property="xProgress" destination="c5G-jo-0NI" id="z2T-dy-brh"/>
+                        <outlet property="yLabel" destination="oKP-Q2-Vg6" id="ly5-gT-BsX"/>
+                        <outlet property="yProgress" destination="SVH-eC-yWh" id="WLV-BW-adh"/>
+                        <outlet property="zLabel" destination="u2X-W5-xs5" id="Sie-z5-Hrn"/>
+                        <outlet property="zProgress" destination="GIx-Dd-k5p" id="Ffa-1c-qq0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6W0-4j-6bK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="1063.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kSI-na-HgZ">
@@ -599,7 +749,47 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ri-7M-d6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491" y="556.5"/>
+            <point key="canvasLocation" x="2409" y="556.5"/>
+        </scene>
+        <!--主页显示-->
+        <scene sceneID="sXo-rs-PVp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U4f-Gm-v9K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="主页显示" id="clE-MP-VAY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HhV-z6-3a8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PzQ-wt-J4X" kind="relationship" relationship="rootViewController" id="tPY-lk-Zz3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQ4-9Z-bfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367.5" y="-1596.75"/>
+        </scene>
+        <!--coremotion-->
+        <scene sceneID="9s8-AD-ptl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yQK-L7-NSO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="coremotion" id="Ykw-Lb-ImS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NkM-3x-dZM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8bo-ui-eki" kind="relationship" relationship="rootViewController" id="Dl3-Ff-408"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwF-9P-8Sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="1057.5"/>
         </scene>
     </scenes>
 </document>
