@@ -597,6 +597,7 @@
                         <viewControllerLayoutGuide type="bottom" id="182-Kn-TES"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="omZ-eV-tHk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQt-p8-pnp">
@@ -645,12 +646,20 @@
                                 <rect key="frame" x="0.0" y="-2" width="150" height="2"/>
                                 <animations/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Shake?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edN-dT-nez">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SVH-eC-yWh" firstAttribute="trailing" secondItem="c5G-jo-0NI" secondAttribute="trailing" id="2fh-Zg-myd"/>
                             <constraint firstItem="oKP-Q2-Vg6" firstAttribute="top" secondItem="fQt-p8-pnp" secondAttribute="bottom" constant="48" id="B9L-dy-ICT"/>
+                            <constraint firstItem="182-Kn-TES" firstAttribute="top" secondItem="edN-dT-nez" secondAttribute="bottom" constant="202" id="CrI-5s-sko"/>
                             <constraint firstItem="u2X-W5-xs5" firstAttribute="centerY" secondItem="GIx-Dd-k5p" secondAttribute="centerY" id="Es7-jr-lmY"/>
                             <constraint firstItem="SVH-eC-yWh" firstAttribute="leading" secondItem="GIx-Dd-k5p" secondAttribute="leading" id="GBZ-jT-c0p"/>
                             <constraint firstItem="c5G-jo-0NI" firstAttribute="centerY" secondItem="fQt-p8-pnp" secondAttribute="centerY" id="I4J-kk-AsI"/>
@@ -658,6 +667,7 @@
                             <constraint firstItem="SVH-eC-yWh" firstAttribute="trailing" secondItem="GIx-Dd-k5p" secondAttribute="trailing" id="QqS-TD-5ad"/>
                             <constraint firstItem="fQt-p8-pnp" firstAttribute="leading" secondItem="oKP-Q2-Vg6" secondAttribute="leading" id="SG2-g1-Pmu"/>
                             <constraint firstItem="SVH-eC-yWh" firstAttribute="centerY" secondItem="oKP-Q2-Vg6" secondAttribute="centerY" id="am8-uz-ccQ"/>
+                            <constraint firstItem="edN-dT-nez" firstAttribute="centerX" secondItem="omZ-eV-tHk" secondAttribute="centerX" id="fB0-VA-DeV"/>
                             <constraint firstItem="fQt-p8-pnp" firstAttribute="top" secondItem="GcW-ii-eqG" secondAttribute="bottom" constant="156" id="kZd-8w-xGd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5G-jo-0NI" secondAttribute="trailing" constant="45" id="oKz-ha-ift"/>
                             <constraint firstItem="u2X-W5-xs5" firstAttribute="top" secondItem="oKP-Q2-Vg6" secondAttribute="bottom" constant="62" id="rA9-ra-kJY"/>
@@ -672,6 +682,7 @@
                                 <exclude reference="c5G-jo-0NI"/>
                                 <exclude reference="SVH-eC-yWh"/>
                                 <exclude reference="GIx-Dd-k5p"/>
+                                <exclude reference="edN-dT-nez"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="SG2-g1-Pmu"/>
@@ -688,6 +699,8 @@
                                 <exclude reference="Es7-jr-lmY"/>
                                 <exclude reference="JbJ-bb-uDs"/>
                                 <exclude reference="rA9-ra-kJY"/>
+                                <exclude reference="fB0-VA-DeV"/>
+                                <exclude reference="CrI-5s-sko"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -698,6 +711,7 @@
                                 <include reference="c5G-jo-0NI"/>
                                 <include reference="SVH-eC-yWh"/>
                                 <include reference="GIx-Dd-k5p"/>
+                                <include reference="edN-dT-nez"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="SG2-g1-Pmu"/>
@@ -714,11 +728,14 @@
                                 <include reference="Es7-jr-lmY"/>
                                 <include reference="JbJ-bb-uDs"/>
                                 <include reference="rA9-ra-kJY"/>
+                                <include reference="fB0-VA-DeV"/>
+                                <include reference="CrI-5s-sko"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="eCd-Ze-iSB"/>
                     <connections>
+                        <outlet property="shakeLabel" destination="edN-dT-nez" id="JE8-Cb-CTa"/>
                         <outlet property="xLabel" destination="I4J-kk-AsI" id="XPh-1a-2VY"/>
                         <outlet property="xProgress" destination="c5G-jo-0NI" id="z2T-dy-brh"/>
                         <outlet property="yLabel" destination="oKP-Q2-Vg6" id="ly5-gT-BsX"/>
